@@ -1,0 +1,25 @@
+table, th, td {
+    border-collapse: collapse;
+    border:1px solid black;
+}
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    height: 40px;
+    font-size: 23px;
+}
+
+th {
+    background-color: yellow;
+    font-family: Arial Black;
+    color: orange;
+}
+
+td {
+    background-color: lightgreen;
+    font-style: italic;
+    color: green;
+}
