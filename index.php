@@ -30,7 +30,9 @@ $countries = [
     ],
 ];
 for ($i = 0; $i < count($countries); $i++) {
-    $countries[$i]['population']["average"] = ($countries[$i]["population"]["2000"] + $countries[$i]["population"]["2010"]) / 2;
+//     $countries[$i]['population']["average"] = ($countries[$i]["population"]["2000"] + $countries[$i]["population"]["2010"]) / 2;
+$populAverage = (array_sum($countries[$i]['population'])/count($countries[$i]['population']));
+$countries[$i]['population']["average"] = $populAverage;
 }
 
 //echo "{$countries[0]['name']} : {$countries[0]['population']['2010']}\n";
@@ -52,7 +54,8 @@ function cmp_name($a, $b)
 
 function cmp2($a, $b)
 {
-    return ($a['population']["average"] <=> $b['population']["average"]);
+    return (($a["population"]["2000"] + $a["population"]["2010"])/2<=>($b["population"]["2000"] + $b["population"]["2010"])/2);
+    // return ($a['population']["average"] <=> $b['population']["average"]);
 }
 
 function try_walk($country, $key_country, $data)
