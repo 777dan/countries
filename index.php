@@ -54,7 +54,7 @@ function cmp_name($a, $b)
 
 function cmp2($a, $b)
 {
-    return (($a["population"]["2000"] + $a["population"]["2010"])/2<=>($b["population"]["2000"] + $b["population"]["2010"])/2);
+    return (array_sum($a['population'])/count($a['population']))<=>(array_sum($b['population'])/count($b['population']));
     // return ($a['population']["average"] <=> $b['population']["average"]);
 }
 
